@@ -63,7 +63,7 @@ export default function Home() {
 
       <section id="tools">
         <h2>Tools</h2>
-        <div className="project-grid">
+        <div className="tools-scroll">
           {tools.map((t) => (
             <article className="project-card" key={t.href}>
               <h3>
