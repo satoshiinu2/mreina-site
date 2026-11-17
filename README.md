@@ -15,20 +15,16 @@ npm run dev        # http://localhost:3000
 npm run build      # 静的ファイルが out/ に書き出される
 ```
 
-## Cloudflare Pages へのデプロイ（Git 連携）
+## Cloudflare へのデプロイ（Git 連携）
 
-このリポジトリを Cloudflare Pages に接続すると、push するたびに自動で
-ビルド＆デプロイされる。
+このリポジトリを Cloudflare Workers（静的アセット配信）に接続してあり、
+push するたびに自動でビルド＆デプロイされる。
 
-1. Cloudflare ダッシュボード → Workers & Pages → Create application →
-   Pages → Connect to Git → このリポジトリ（mreina-site）を選択
-2. ビルド設定
-   - Framework preset: Next.js (Static HTML Export)
-   - Build command: `npm run build`
-   - Build output directory: `out`
-   - Production branch: `main`
-3. カスタムドメイン: Pages プロジェクト → Custom domains →
-   `www.mreina-tits-leaks.net` を追加（DNS は同じ Cloudflare ゾーン内なので自動）
+- Build command: `npm run build`
+- Deploy command: `npx wrangler deploy`
+- `wrangler.jsonc` の `assets.directory` が `./out`（静的書き出し先）を指す
+- カスタムドメイン: Worker の Settings → Domains & Routes から
+  `www.mreina-tits-leaks.net` を追加（DNS は同じ Cloudflare ゾーン内なので自動）
 
 注意: このサイトは公開用。files-private / proxy-private（AQUOS 側）とは無関係で、
 Tunnel には入れないこと。
