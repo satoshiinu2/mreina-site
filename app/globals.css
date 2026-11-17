@@ -140,3 +140,230 @@ section h2 {
   font-size: 0.85rem;
   border-top: 1px solid var(--border);
 }
+
+/* --- tools --- */
+
+.page-title {
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+}
+
+.tool-wrap {
+  padding-top: 40px;
+  max-width: 560px;
+}
+
+.tool-wrap.wide {
+  max-width: none;
+}
+
+.tool-desc {
+  color: var(--muted);
+  margin: 0 0 24px;
+}
+
+.tool-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.tool-input {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--fg);
+  padding: 8px 10px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.tool-input.num {
+  width: 84px;
+}
+
+.tool-btn {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--fg);
+  padding: 8px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.tool-btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #0f1115;
+  font-weight: 700;
+}
+
+.tool-btn:active {
+  transform: translateY(1px);
+}
+
+.tool-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.tool-error {
+  color: #ff7b72;
+  margin: 16px 0 0;
+}
+
+.tool-result {
+  margin-top: 20px;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.tool-note {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 12px;
+}
+
+.tool-back {
+  margin-top: 24px;
+}
+
+.equation {
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.9;
+}
+
+.equation.final {
+  color: var(--accent);
+}
+
+/* calc */
+
+.calc {
+  max-width: 340px;
+}
+
+.calc-display {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 2rem;
+  text-align: right;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  overflow-x: auto;
+  margin-bottom: 12px;
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.calc-btn {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--fg);
+  font-size: 1.15rem;
+  padding: 14px 0;
+  cursor: pointer;
+  font-family: inherit;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.calc-btn.op {
+  color: var(--accent);
+}
+
+.calc-btn.eq {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #0f1115;
+  font-weight: 700;
+}
+
+.calc-btn:active {
+  transform: translateY(1px);
+}
+
+/* linear / sqrt */
+
+.point-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+}
+
+.sqrt-input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.sqrt-symbol {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* tree diagram */
+
+.tool-form-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.tool-form-row label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.tool-form-row label.grow {
+  flex: 1;
+  min-width: 140px;
+}
+
+.prob-suffix {
+  color: var(--muted);
+  padding-bottom: 10px;
+}
+
+.prob-result {
+  font-weight: 700;
+  padding-bottom: 8px;
+}
+
+.tree-scroll {
+  overflow: auto;
+  border-top: 1px solid var(--border);
+  padding-top: 8px;
+  max-height: 70vh;
+}
+
+.tree-label {
+  fill: var(--fg);
+  font-size: 13px;
+}
+
+.tree-label.hit {
+  fill: #ff7b72;
+  font-weight: 700;
+}

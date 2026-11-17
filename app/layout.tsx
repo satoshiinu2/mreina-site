@@ -35,8 +35,9 @@ export default function RootLayout({
             mreina-tits-leaks.net
           </a>
           <nav>
-            <a href="#projects">Projects</a>
-            <a href="#links">Links</a>
+            <a href="/#projects">Projects</a>
+            <a href="/tools">Tools</a>
+            <a href="/#links">Links</a>
           </nav>
         </header>
         <main>{children}</main>
