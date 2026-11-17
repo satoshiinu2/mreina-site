@@ -18,8 +18,8 @@ const projects: Project[] = [
   {
     name: "LilLiftBoard",
     description:
-      "iPhone のキーボードを持ち上げて、下の空きスペースにカスタムボタンを置けるようにする tweak。ジェイルブレイク環境向け。",
-    tags: ["iOS", "Theos", "v1.0.0 公開済み"],
+      "iPhone のキーボードを持ち上げて、下の空きスペースにカスタムボタンを置ける tweak。v1.1.0 ではドックボタンを左／中央／右の3グループに分けて、追加・並び替え・サイズ調整ができるようになりました。ジェイルブレイク環境向け。",
+    tags: ["iOS", "Theos", "v1.1.0 公開済み"],
     url: "https://github.com/satoshiinu2/LilLiftBoard",
   },
 ];
