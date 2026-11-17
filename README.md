@@ -23,8 +23,8 @@ push するたびに自動でビルド＆デプロイされる。
 - Build command: `npm run build`
 - Deploy command: `npx wrangler deploy`
 - `wrangler.jsonc` の `assets.directory` が `./out`（静的書き出し先）を指す
-- カスタムドメイン: Worker の Settings → Domains & Routes から
-  `www.mreina-tits-leaks.net` を追加（DNS は同じ Cloudflare ゾーン内なので自動）
+- カスタムドメイン: Worker の Domains で apex（`mreina-tits-leaks.net`）が
+  Production として接続済み
 
 注意: このサイトは公開用。files-private / proxy-private（AQUOS 側）とは無関係で、
 Tunnel には入れないこと。

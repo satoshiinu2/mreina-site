@@ -3,7 +3,7 @@ import "./globals.css";
 
 const siteName = "satoshiinu";
 const description = "satoshiinu の個人サイト。開発中のプロジェクトを紹介します。";
-const url = "https://www.mreina-tits-leaks.net";
+const url = "https://mreina-tits-leaks.net";
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
