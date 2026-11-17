@@ -1,3 +1,5 @@
+import { tools } from "./tools/tools-data";
+
 type Project = {
   name: string;
   description: string;
@@ -62,30 +64,14 @@ export default function Home() {
       <section id="tools">
         <h2>Tools</h2>
         <div className="project-grid">
-          <article className="project-card">
-            <h3>
-              <a href="/tools/calc">電卓</a>
-            </h3>
-            <p>ボタンを押して使うシンプルな電卓。π や累乗つき。</p>
-          </article>
-          <article className="project-card">
-            <h3>
-              <a href="/tools/linear">一次関数をyをxの式で表す</a>
-            </h3>
-            <p>2点の座標から、直線の式 y = ax + b の a と b を求める。</p>
-          </article>
-          <article className="project-card">
-            <h3>
-              <a href="/tools/tree-diagram">オート樹形図</a>
-            </h3>
-            <p>場合の数の樹形図を自動で描く。確率のテスト機能つき。</p>
-          </article>
-          <article className="project-card">
-            <h3>
-              <a href="/tools/sqrt">根号の中をできるだけ簡単な自然数で表す</a>
-            </h3>
-            <p>√の中身を簡単にして、a√b の形にする。計算過程つき。</p>
-          </article>
+          {tools.map((t) => (
+            <article className="project-card" key={t.href}>
+              <h3>
+                <a href={t.href}>{t.name}</a>
+              </h3>
+              <p>{t.description}</p>
+            </article>
+          ))}
         </div>
         <p>
           <a href="/tools">→ ツール一覧</a>
