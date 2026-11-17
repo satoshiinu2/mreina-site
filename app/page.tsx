@@ -34,9 +34,9 @@ export default function Home() {
           Just code.
         </h1>
         <p className="subtitle">
-          ドメインもこのサイトも思いつきで作りました。
+          ただのコード置き場。ドメインもこのサイトも思いつきで作りました。
           <br />
-          中身は、開発中のアプリや作ったツールの置き場所です。
+          中身は、開発中のアプリや作ったツールです。
         </p>
       </section>
 
@@ -87,7 +87,7 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              GitHub
+              GitHub — satoshiinu2
             </a>
           </li>
         </ul>
