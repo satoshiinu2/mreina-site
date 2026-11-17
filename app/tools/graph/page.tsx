@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import GraphTool from "./GraphTool";
 
 export const metadata: Metadata = {
-  title: "関数グラフ描画 | satoshiinu",
+  title: "関数グラフ描画",
   description: "一次関数・二次関数のグラフをその場で描くツール。",
 };
 

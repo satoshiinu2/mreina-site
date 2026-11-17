@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import LinearTool from "./LinearTool";
 
 export const metadata: Metadata = {
-  title: "一次関数をyをxの式で表す | satoshiinu",
+  title: "一次関数をyをxの式で表す",
   description: "2点の座標から直線の式 y = ax + b を求めるツール。",
 };
 

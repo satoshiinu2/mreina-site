@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import SimultaneousTool from "./SimultaneousTool";
 
 export const metadata: Metadata = {
-  title: "連立方程式ソルバー | satoshiinu",
+  title: "連立方程式ソルバー",
   description: "二元一次連立方程式の x と y を求めるツール。",
 };
 

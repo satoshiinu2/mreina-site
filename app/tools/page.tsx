@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { tools } from "./tools-data";
 
 export const metadata: Metadata = {
-  title: "ツール | satoshiinu",
+  title: "ツール",
   description: "数学系の小ツール置き場。関数、方程式、確率、図形など。",
 };
 

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteName = "satoshiinu";
-const description = "satoshiinu の個人サイト。開発中のプロジェクトを紹介します。";
+const siteName = "mreina-tits-leaks.net";
+const description = "個人サイト。開発中のアプリや数学系ツールの置き場所です。";
 const url = "https://mreina-tits-leaks.net";
 
 export const metadata: Metadata = {

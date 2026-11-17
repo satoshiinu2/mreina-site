@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PermCombTool from "./PermCombTool";
 
 export const metadata: Metadata = {
-  title: "順列・組み合わせ | satoshiinu",
+  title: "順列・組み合わせ",
   description: "nPr（順列）と nCr（組み合わせ）を計算するツール。",
 };
 

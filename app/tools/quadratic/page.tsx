@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import QuadraticTool from "./QuadraticTool";
 
 export const metadata: Metadata = {
-  title: "二次方程式ソルバー | satoshiinu",
+  title: "二次方程式ソルバー",
   description: "ax² + bx + c = 0 を解の公式で解くツール。途中式つき。",
 };
 

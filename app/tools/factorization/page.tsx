@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import FactorizationTool from "./FactorizationTool";
 
 export const metadata: Metadata = {
-  title: "素因数分解 | satoshiinu",
+  title: "素因数分解",
   description: "整数を素数の積に分解するツール。割り算の過程つき。",
 };
 

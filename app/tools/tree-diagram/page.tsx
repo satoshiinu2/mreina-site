@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import TreeTool from "./TreeTool";
 
 export const metadata: Metadata = {
-  title: "オート樹形図 | satoshiinu",
+  title: "オート樹形図",
   description: "場合の数の樹形図を自動で描くツール。確率のテスト機能つき。",
 };
 
