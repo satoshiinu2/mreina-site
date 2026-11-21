@@ -1,4 +1,5 @@
 import Reveal from "./_components/Reveal";
+import HSlide from "./_components/HSlide";
 import { tools } from "./tools/tools-data";
 
 type Project = {
@@ -87,14 +88,16 @@ export default function Home() {
 
       <section id="tools">
         <h2>Tools</h2>
-        <div className="tools-scroll">
-          {tools.map((t) => (
-            <article className="project-card" key={t.href}>
-              <h3>
-                <a href={t.href}>{t.name}</a>
-              </h3>
-              <p>{t.description}</p>
-            </article>
+        <div className="tools-scroll" data-hscroll>
+          {tools.map((t, i) => (
+            <HSlide key={t.href} delay={Math.min(i, 3) * 70}>
+              <article className="project-card">
+                <h3>
+                  <a href={t.href}>{t.name}</a>
+                </h3>
+                <p>{t.description}</p>
+              </article>
+            </HSlide>
           ))}
         </div>
         <p>
