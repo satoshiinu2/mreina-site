@@ -370,3 +370,80 @@ section h2 {
   display: block;
   margin: 8px 0;
 }
+
+/* --- top motion (案F: scroll reveal) --- */
+
+.word-rise {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.word-rise > span {
+  display: inline-block;
+  animation: top-rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes top-rise {
+  from { transform: translateY(110%); }
+  to { transform: translateY(0); }
+}
+
+.hero .subtitle {
+  animation: top-fade-up 0.7s ease 0.45s both;
+}
+
+@keyframes top-fade-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+.project-grid .reveal,
+.project-grid .project-card {
+  height: 100%;
+}
+
+.tag-marquee {
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 0;
+  white-space: nowrap;
+}
+
+.tag-marquee-track {
+  display: inline-block;
+  animation: top-marquee 22s linear infinite;
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.88rem;
+}
+
+@keyframes top-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .word-rise > span,
+  .hero .subtitle,
+  .tag-marquee-track {
+    animation: none;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

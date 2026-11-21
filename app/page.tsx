@@ -1,3 +1,4 @@
+import Reveal from "./_components/Reveal";
 import { tools } from "./tools/tools-data";
 
 type Project = {
@@ -24,14 +25,31 @@ const projects: Project[] = [
   },
 ];
 
+function WordRise({ text, base = 0 }: { text: string; base?: number }) {
+  return (
+    <>
+      {text.split(" ").map((w, i) => (
+        <span key={i}>
+          <span className="word-rise">
+            <span style={{ animationDelay: `${base + i * 90}ms` }}>{w}</span>
+          </span>{" "}
+        </span>
+      ))}
+    </>
+  );
+}
+
+const MARQUEE =
+  "Esotereel — Rust / C++ / Qt · LilLiftBoard — iOS / Theos · ANTI-PAYWALL · No leaks here. Just code. · ";
+
 export default function Home() {
   return (
     <>
       <section className="hero">
-        <h1>
-          No leaks here.
+        <h1 aria-label="No leaks here. Just code.">
+          <WordRise text="No leaks here." />
           <br />
-          Just code.
+          <WordRise text="Just code." base={280} />
         </h1>
         <p className="subtitle">
           ただのコード置き場。ドメインもこのサイトも思いつきで作りました。
@@ -40,23 +58,29 @@ export default function Home() {
         </p>
       </section>
 
+      <div className="tag-marquee" aria-hidden="true">
+        <span className="tag-marquee-track">{MARQUEE.repeat(2)}</span>
+      </div>
+
       <section id="projects">
         <h2>Projects</h2>
         <div className="project-grid">
-          {projects.map((p) => (
-            <article className="project-card" key={p.name}>
-              <h3>
-                <a href={p.url} target="_blank" rel="noreferrer">
-                  {p.name}
-                </a>
-              </h3>
-              <p>{p.description}</p>
-              <ul className="tags">
-                {p.tags.map((t) => (
-                  <li key={t}>{t}</li>
-                ))}
-              </ul>
-            </article>
+          {projects.map((p, i) => (
+            <Reveal key={p.name} delay={i * 120}>
+              <article className="project-card">
+                <h3>
+                  <a href={p.url} target="_blank" rel="noreferrer">
+                    {p.name}
+                  </a>
+                </h3>
+                <p>{p.description}</p>
+                <ul className="tags">
+                  {p.tags.map((t) => (
+                    <li key={t}>{t}</li>
+                  ))}
+                </ul>
+              </article>
+            </Reveal>
           ))}
         </div>
       </section>
