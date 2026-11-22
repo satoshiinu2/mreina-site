@@ -318,3 +318,21 @@
     transition: none;
   }
 }
+
+/* --- tools scroll variants (G/H/I) --- */
+
+.anim-tools {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.anim-tools .project-card {
+  flex: 0 0 250px;
+}
+
+.anim-tools-noscroll {
+  overflow-x: hidden;
+}
