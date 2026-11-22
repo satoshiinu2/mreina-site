@@ -14,6 +14,10 @@ export default function HSlide({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    if (typeof IntersectionObserver === "undefined") {
+      el.classList.add("is-in");
+      return;
+    }
     const root = el.closest("[data-hscroll]");
     const io = new IntersectionObserver(
       (entries) => {
@@ -24,7 +28,9 @@ export default function HSlide({
           }
         }
       },
-      { root, threshold: 0.35 },
+      // Fire before the card reaches the visible area so it is never
+      // seen still transparent while scrolling.
+      { root, rootMargin: "0px 90% 0px 0px", threshold: 0 },
     );
     io.observe(el);
     return () => io.disconnect();
