@@ -453,9 +453,10 @@ section h2 {
 .tools-scroll .hslide {
   flex: 0 0 auto;
   display: flex;
+  scroll-snap-align: start;
   opacity: 0;
-  transform: translateX(48px);
-  transition: opacity 0.55s ease, transform 0.55s ease;
+  transform: translateX(32px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
 }
 
 .tools-scroll .hslide.is-in {

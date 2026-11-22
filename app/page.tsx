@@ -90,7 +90,7 @@ export default function Home() {
         <h2>Tools</h2>
         <div className="tools-scroll" data-hscroll>
           {tools.map((t, i) => (
-            <HSlide key={t.href} delay={Math.min(i, 3) * 70}>
+            <HSlide key={t.href} delay={Math.min(i, 2) * 60}>
               <article className="project-card">
                 <h3>
                   <a href={t.href}>{t.name}</a>
