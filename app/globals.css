@@ -447,3 +447,30 @@ section h2 {
     transition: none;
   }
 }
+
+/* --- tools horizontal slide-in --- */
+
+.tools-scroll .hslide {
+  flex: 0 0 auto;
+  display: flex;
+  opacity: 0;
+  transform: translateX(48px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.tools-scroll .hslide.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+.tools-scroll .hslide .project-card {
+  height: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tools-scroll .hslide {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
