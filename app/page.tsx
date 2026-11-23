@@ -40,7 +40,7 @@ function WordRise({ text, base = 0 }: { text: string; base?: number }) {
 }
 
 const MARQUEE =
-  "Esotereel — Rust / C++ / Qt · LilLiftBoard — iOS / Theos · ANTI-PAYWALL · No leaks here. Just code. · ";
+  "ANTI-PAYWALL — Features shouldn't be locked behind subscriptions. · No paywall. No subscription. Just code. · ";
 
 export default function Home() {
   return (
